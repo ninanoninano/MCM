@@ -58,6 +58,7 @@ class WindowClass(QMainWindow, form_class):
 
         # 설정 변경 다이얼로그 버튼
         self.pt_Btn_OptionDialog.clicked.connect(self.OptionDialog)
+        self.ptex_Btn_OptionDialog.clicked.connect(self.OptionDialog)
 
         # 발표 시작 종료 버튼
         self.pt_Btn_Start.clicked.connect(self.start)
@@ -69,6 +70,7 @@ class WindowClass(QMainWindow, form_class):
 
         # 녹화 버튼
         self.pt_Btn_Recording.clicked.connect(self.recording)
+        self.ptex_Btn_Recording.clicked.connect(self.recording)
 
     # ppt 파일 열기
     def pptfileOpen(self):
@@ -198,6 +200,7 @@ class WindowClass(QMainWindow, form_class):
         if self.tabWidget.currentIndex() == 0:
             self.pt_WebCamera.setPixmap(QPixmap.fromImage(img))
             self.pt_WebCamera.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignHCenter)
+
         elif self.tabWidget.currentIndex() == 1:
             self.ptex_WebCamera.setPixmap(QPixmap.fromImage(img))
             self.ptex_WebCamera.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignHCenter)
